@@ -2,6 +2,9 @@
 
 A Python script that scrapes a website, extracts text, filters out stop words, and generates a wordlist sorted by frequency. The final wordlist is saved as "wordlist.txt" in a user-specified directory.
 
+![Script](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcG5lbWdmN3o2YzU1a2Z5Z3JldzZ6b2ZoY3lnM3A0dzY2cmtnYWR6bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IX3ADEa37v9aHvPeFX/giphy.gif)
+
+
 ## Prerequisites
 
 - **Python:** Download and install the latest version from https://www.python.org/downloads/.
