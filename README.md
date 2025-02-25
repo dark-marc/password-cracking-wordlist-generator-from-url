@@ -74,6 +74,10 @@ Execute the script with:
 
 Follow the on-screen prompts to generate your wordlist.
 
+## Ethical Use:
+
+This script is intended for ethical security testing and research. Use it only on websites where you have permission to test or as part of an authorized security audit. Its purpose is to help identify weak password choices and improve security—not for illegal access.
+
 ## License
 
 This project is open-source and may be used or modified freely. 
