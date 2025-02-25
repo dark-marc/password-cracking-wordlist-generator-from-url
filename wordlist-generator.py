@@ -208,12 +208,13 @@ def admin_panel():
                 print("Invalid input. Please enter a positive number or type 'all'.")
 
         # Save directory
-        while True:
-            save_directory = input("\nEnter the directory to save 'wordlist.txt': ").strip()
-            if os.path.isdir(save_directory):
-                break
-            print("Invalid directory. Please enter a valid directory path.")
-
+        save_directory = input("\nEnter the directory to save 'wordlist.txt' (press Enter to use current directory): ").strip()
+        if not save_directory:
+            save_directory = os.getcwd()
+        elif not os.path.isdir(save_directory):
+            print("Invalid directory. Using current directory instead.")
+            save_directory = os.getcwd()
+                
     # Execute main function
     result = build_word_count_json(base_url, stop_words, max_pages, save_txt, save_directory, top_x)
 
