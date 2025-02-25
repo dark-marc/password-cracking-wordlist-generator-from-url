@@ -13,9 +13,12 @@ A Python script that scrapes a website, extracts text, filters out stop words, a
    Clone this repository or download the source code to your local machine.
 
 2. **Create a Virtual Environment**  
-   Navigate to the project folder in your terminal or command prompt, then run:  
+   Navigate to the project folder in your terminal or command prompt, then run:
+   ```
+   python -m venv venv
+   ```
 
-3. **Activate the virtual environment:** 
+4. **Activate the virtual environment:** 
 - On Windows:  
   ```
   venv\Scripts\activate
