@@ -71,5 +71,7 @@ Follow the on-screen prompts to generate your wordlist.
 ## License
 
 This project is open-source and may be used or modified freely. 
+
 Credit must be given to **DARK MARC** (https://darkmarc.substack.com/) for the original work.
+
 Enjoy!
