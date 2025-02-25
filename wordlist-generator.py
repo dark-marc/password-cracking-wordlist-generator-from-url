@@ -190,10 +190,12 @@ def admin_panel():
     # Max pages
     max_pages = get_positive_integer_input("\nHow many pages to scan? (Enter a number or type 'all'): ", allow_all=True)
 
-    # Save to CSV
+    # Save to TXT
+    
     save_txt = get_user_input("\nSave results as TXT? (y/n): ", valid_options=['y', 'n'])
-    save_path = None
+    save_directory = None
     top_x = None
+
     if save_txt == 'y':
         # Number of top words to save
         while True:
@@ -209,13 +211,11 @@ def admin_panel():
 
         # Save directory
         save_directory = input("\nEnter the directory to save 'wordlist.txt' (press Enter to use current directory): ").strip()
-        if not save_directory:
+        if not save_directory or not os.path.isdir(save_directory):
+            if save_directory and not os.path.isdir(save_directory):
+                print("Invalid directory. Using current directory instead.")
             save_directory = os.getcwd()
-        elif not os.path.isdir(save_directory):
-            print("Invalid directory. Using current directory instead.")
-            save_directory = os.getcwd()
-                
-    # Execute main function
+
     result = build_word_count_json(base_url, stop_words, max_pages, save_txt, save_directory, top_x)
 
     # Print final results
